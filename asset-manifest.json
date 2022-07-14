@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/IoT-React-Js-Frontend/static/css/main.19381383.css",
+    "main.js": "/IoT-React-Js-Frontend/static/js/main.5a584650.js",
+    "static/js/787.cda612ba.chunk.js": "/IoT-React-Js-Frontend/static/js/787.cda612ba.chunk.js",
+    "index.html": "/IoT-React-Js-Frontend/index.html",
+    "main.19381383.css.map": "/IoT-React-Js-Frontend/static/css/main.19381383.css.map",
+    "main.5a584650.js.map": "/IoT-React-Js-Frontend/static/js/main.5a584650.js.map",
+    "787.cda612ba.chunk.js.map": "/IoT-React-Js-Frontend/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.19381383.css",
+    "static/js/main.5a584650.js"
+  ]
+}
