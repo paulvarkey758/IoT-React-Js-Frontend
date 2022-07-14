@@ -1,23 +1,53 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import {useState,useEffect} from 'react'
+import axios from 'axios';
 
 function App() {
+  const [state,setState]=useState([]);
+
+  useEffect(()=>{
+    axios.get('https://paulkv.pythonanywhere.com/api/read-data/').then((resp)=>{
+      console.log(resp.data);
+      setState(resp.data);
+    }).catch((err)=>{
+      console.log("error!!!");
+    });
+  },[]);
+
+  const handleClick=(obj)=>{
+    console.log(obj.name)
+    console.log(obj.status);
+    let id=obj.id;
+    let name=obj.name;
+    let status=obj.status
+    status=!status;
+    console.log(status);
+    axios.put(`https://paulkv.pythonanywhere.com/api/write-data/${id}/`,{
+      'name':name,
+      'status':status
+    }).then((resp)=>{
+      console.log(resp.data);
+      axios.get('https://paulkv.pythonanywhere.com/api/read-data/').then((resp)=>{
+        console.log(resp.data);
+        setState(resp.data);
+      }).catch((err)=>{
+        console.log("error!!!");
+      });
+    }).catch((err)=>{
+      console.log("error!!!");
+    })
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        {state.map((obj,index)=>{
+          return(
+            <button className="btn" onClick={()=>{handleClick(obj)}}>{obj.name}</button>
+          )
+        })}
+      </div>
     </div>
   );
 }
