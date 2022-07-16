@@ -15,7 +15,15 @@ function App() {
     });
   },[]);
 
-  const handleClick=(obj)=>{
+  const handleClick=(obj,e)=>{
+    console.log(e.target);
+    var buttons=document.getElementsByClassName("btn");
+    for(var i=0;i<buttons.length;i++){
+      buttons[i].style.backgroundColor="white";
+      buttons[i].style.color="black";
+    }
+    e.target.style.backgroundColor="red";
+    e.target.style.color="white";
     console.log(obj.name)
     console.log(obj.status);
     let id=obj.id;
@@ -44,7 +52,7 @@ function App() {
       <div className="container">
         {state.map((obj,index)=>{
           return(
-            <button className="btn" onClick={()=>{handleClick(obj)}}>{obj.name}</button>
+            <button className="btn" onClick={(e)=>{handleClick(obj,e)}}>{obj.name}</button>
           )
         })}
       </div>
