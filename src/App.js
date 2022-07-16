@@ -15,8 +15,7 @@ function App() {
     });
   },[]);
 
-  const handleClick=(obj,e)=>{
-    console.log(e.target);
+  const handleClick=(obj)=>{
     
     console.log(obj.name)
     console.log(obj.status);
@@ -25,15 +24,7 @@ function App() {
     let status=obj.status
     status=!status;
     console.log(status);
-    //to change the selected button color
-    if(status===true){
-      e.target.style.backgroundColor="red";
-      e.target.style.color="white";
-    }
-    else{
-      e.target.style.backgroundColor="white";
-      e.target.style.color="black";
-    }
+    
 
     axios.put(`https://paulkv.pythonanywhere.com/api/write-data/${id}/`,{
       'name':name,
@@ -56,7 +47,7 @@ function App() {
       <div className="container">
         {state.map((obj,index)=>{
           return(
-              <button className="btn" onClick={(e)=>{handleClick(obj,e)}} style={obj.status?{backgroundColor:"red"}:{backgroundColor:"white"}} >{obj.name}</button>
+              <button className="btn" onClick={()=>{handleClick(obj)}} style={obj.status?{backgroundColor:"red",color:"white"}:{backgroundColor:"white",color:"black"}} >{obj.name}</button>
           )
         })}
       </div>
