@@ -52,8 +52,8 @@
  flex-wrap: wrap;
 }
 .btn{
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
   border: 3px solid var(--the-blue);
   border-radius: 20px;
   text-align: center;
@@ -79,5 +79,9 @@
   .inner-body{
     height: calc(100vh - 4rem);
     border-radius: 0;
+  }
+  .btn{
+    width: 6rem;
+    height: 6rem;
   }
 }
