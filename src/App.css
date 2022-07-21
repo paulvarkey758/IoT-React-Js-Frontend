@@ -52,8 +52,8 @@
  flex-wrap: wrap;
 }
 .btn{
-  width: 5rem;
-  height: 5rem;
+  width: 6rem;
+  height: 6rem;
   border: 3px solid var(--the-blue);
   border-radius: 20px;
   text-align: center;
