@@ -45,11 +45,16 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        {state.map((obj,index)=>{
-          return(
-              <button className="btn" onClick={()=>{handleClick(obj)}} style={obj.status?{backgroundColor:"red",color:"white"}:{backgroundColor:"white",color:"black"}} >{obj.name}</button>
-          )
-        })}
+        <div className="header">My<span>IoT</span></div>
+        <div className="inner-body">
+          <div className="button-container">
+            {state.map((obj,index)=>{
+              return(
+                  <button className="btn" onClick={()=>{handleClick(obj)}} style={obj.status?{backgroundColor:"#2A1E5C",color:"#F0EDEE"}:{backgroundColor:"#F0EDEE",color:"#2A1E5C"}} >{obj.name}</button>
+              )
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );
