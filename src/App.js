@@ -13,7 +13,7 @@ function App() {
     }).catch((err)=>{
       console.log("error!!!");
     });
-  },[]);
+  });
 
   const handleClick=(obj)=>{
     
