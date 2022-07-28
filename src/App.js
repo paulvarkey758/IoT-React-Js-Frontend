@@ -7,7 +7,7 @@ function App() {
   const [state,setState]=useState([]);
 
   useEffect(()=>{
-    axios.get('https://paulkv.pythonanywhere.com/api/read-data/').then((resp)=>{
+    axios.get('https://paulkvarkey.pythonanywhere.com/api/read-data/').then((resp)=>{
       console.log(resp.data);
       setState(resp.data);
     }).catch((err)=>{
@@ -26,12 +26,12 @@ function App() {
     console.log(status);
     
 
-    axios.put(`https://paulkv.pythonanywhere.com/api/write-data/${id}/`,{
+    axios.put(`https://paulkvarkey.pythonanywhere.com/api/write-data/${id}/`,{
       'name':name,
       'status':status
     }).then((resp)=>{
       console.log(resp.data);
-      axios.get('https://paulkv.pythonanywhere.com/api/read-data/').then((resp)=>{
+      axios.get('https://paulkvarkey.pythonanywhere.com/api/read-data/').then((resp)=>{
         console.log(resp.data);
         setState(resp.data);
       }).catch((err)=>{
