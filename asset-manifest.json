@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/IoT-React-Js-Frontend/static/css/main.35202d50.css",
-    "main.js": "/IoT-React-Js-Frontend/static/js/main.6c4a71e1.js",
+    "main.css": "/IoT-React-Js-Frontend/static/css/main.b92a0c57.css",
+    "main.js": "/IoT-React-Js-Frontend/static/js/main.ca9e1f55.js",
     "static/js/787.cda612ba.chunk.js": "/IoT-React-Js-Frontend/static/js/787.cda612ba.chunk.js",
     "index.html": "/IoT-React-Js-Frontend/index.html",
-    "main.35202d50.css.map": "/IoT-React-Js-Frontend/static/css/main.35202d50.css.map",
-    "main.6c4a71e1.js.map": "/IoT-React-Js-Frontend/static/js/main.6c4a71e1.js.map",
+    "main.b92a0c57.css.map": "/IoT-React-Js-Frontend/static/css/main.b92a0c57.css.map",
+    "main.ca9e1f55.js.map": "/IoT-React-Js-Frontend/static/js/main.ca9e1f55.js.map",
     "787.cda612ba.chunk.js.map": "/IoT-React-Js-Frontend/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.35202d50.css",
-    "static/js/main.6c4a71e1.js"
+    "static/css/main.b92a0c57.css",
+    "static/js/main.ca9e1f55.js"
   ]
 }
