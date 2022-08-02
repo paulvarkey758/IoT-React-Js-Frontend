@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -63,6 +65,56 @@
   font-weight: bold;
 }
 
+/*=====================sensors section===============*/
+
+.sen-container{
+  width: 100%;
+  margin: 1rem 0;
+  border: 3px solid var(--the-blue);
+  border-radius: 20px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.sen-card{
+  width: 7rem;
+  height: 7rem;
+  border: 5px solid var(--the-blue);
+  border-radius: 50%;
+  color: var(--the-blue);
+  position: relative;
+  margin-bottom: 4rem;
+}
+.sen-data{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+.sen-title{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -3rem;
+  background-color: var(--the-blue);
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--the-white);
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+.val{
+  font-size: 2rem;
+  
+}
+.unit{
+  font-size: 1.5rem;
+}
 /*============================================mobile devices================================================*/
 
 @media screen and (max-width:576px){
@@ -83,5 +135,12 @@
   .btn{
     width: 6rem;
     height: 6rem;
+  }
+  /*===============================================*/
+  .sen-card{
+    width: 8rem;
+    height: 8rem;
+    margin-right: 5px;
+    margin-left: 5px;
   }
 }

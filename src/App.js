@@ -2,13 +2,13 @@ import React from 'react';
 import './App.css';
 import {useState,useEffect} from 'react'
 import axios from 'axios';
+import Sensors from './Sensors';
 
 function App() {
   const [state,setState]=useState([]);
 
   useEffect(()=>{
     axios.get('https://paulkvarkey.pythonanywhere.com/api/read-data/').then((resp)=>{
-      console.log(resp.data);
       setState(resp.data);
     }).catch((err)=>{
       console.log("error!!!");
@@ -54,6 +54,7 @@ function App() {
               )
             })}
           </div>
+          <Sensors/>
         </div>
       </div>
     </div>
